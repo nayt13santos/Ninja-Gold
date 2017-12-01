@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Move to Click Position</title>
+<style type="text/css">
+
+
+#contentContainer {
+    width: 100%;
+    height: 620px;
+    overflow: hidden;
+    cursor: pointer;
+}
+#ninja {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    left: 50px;
+    top: 50px;
+    transition: left .5s ease-in, top .5s ease-in;
+}
+</style>
+</head>
+
+<body>
+<div id="contentContainer">
+    <img id="ninja" src="ninja.gif">
+</div>
+
+<script src="prefixfree.min.js"></script>
+<script>
+var theninja = document.querySelector("#ninja");
+var container = document.querySelector("#contentContainer");
+
+container.addEventListener("click", getClickPosition, false);
+
+function getClickPosition(e) {
+    var parentPosition = getPosition(e.currentTarget);
+    var xPosition = e.clientX - parentPosition.x - (theninja.clientWidth / 2);
+    var yPosition = e.clientY - parentPosition.y - (theninja.clientHeight / 2);
+
+    theninja.style.left = xPosition + "px";
+    theninja.style.top = yPosition + "px";
+}
+
+// Helper function to get an element's exact position
+function getPosition(el) {
+  var xPos = 0;
+  var yPos = 0;
+
+  while (el) {
+    if (el.tagName == "BODY") {
+      // deal with browser quirks with body/window/document and page scroll
+      var xScroll = el.scrollLeft || document.documentElement.scrollLeft;
+      var yScroll = el.scrollTop || document.documentElement.scrollTop;
+
+      xPos += (el.offsetLeft - xScroll + el.clientLeft);
+      yPos += (el.offsetTop - yScroll + el.clientTop);
+    } else {
+      // for all other non-BODY elements
+      xPos += (el.offsetLeft - el.scrollLeft + el.clientLeft);
+      yPos += (el.offsetTop - el.scrollTop + el.clientTop);
+    }
+
+    el = el.offsetParent;
+  }
+  return {
+    x: xPos,
+    y: yPos
+  };
+}
+</script>
+</body>
+</html>

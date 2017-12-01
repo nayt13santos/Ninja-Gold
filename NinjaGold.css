@@ -1,0 +1,485 @@
+body {
+  background-image: url("wallpaper.jpg");
+}
+
+ul {
+  list-style-type: none;
+  max-height:130px;
+  overflow-y:auto;
+  overflow-x:hidden;
+}
+
+#ninja {
+  -webkit-transition: 1s;
+  height: 100px;
+  width: 100px;
+  position: relative;
+  top: 350px;
+  transition: 3s;
+}
+
+#contentContainer {
+  width: 100%;
+  height: 620px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#blackRectangle {
+  height: 200px;
+  width: 750px;
+  background-color: black;
+  position: absolute;
+  top: 460px;
+  left: 600px;
+  z-index: -1;
+  border-radius: 5px;
+  opacity: 0.9;
+}
+
+#textLabel1 {
+  height: 20px;
+  width: 271.5px;
+  background-color: black;
+  position: absolute;
+  top: 535px;
+  left: 30px;
+  border-radius: 10px;
+}
+
+#textLabel2 {
+  height: 20px;
+  width: 271.5px;
+  background-color: black;
+  position: absolute;
+  top: 535px;
+  left: 310px;
+  border-radius: 10px;
+}
+
+#textLabel3 {
+  height: 20px;
+  width: 271.5px;
+  background-color: black;
+  position: absolute;
+  top: 630px;
+  left: 30px;
+  border-radius: 10px;
+}
+
+#textLabel4 {
+  height: 20px;
+  width: 271.5px;
+  background-color: black;
+  position: absolute;
+  top: 630px;
+  left: 310px;
+  border-radius: 10px;
+}
+
+#totalGold {
+  position: absolute;
+  top: 465px;
+  left: 30px;
+  height: 75px;
+  width: 270px;
+  font-size: 60px;
+  border-radius: 10px;
+  opacity: 0.8;
+  color: white;
+  text-align: center;
+  font-family: impact;
+  background-color: gray;
+  border: 0;
+}
+
+#totalGain {
+  position: absolute;
+  top: 560px;
+  left: 30px;
+  height: 75px;
+  width: 270px;
+  font-size: 60px;
+  border-radius: 10px;
+  opacity: 0.8;
+  color: white;
+  text-align: center;
+  background-color: gray;
+  border: 0
+}
+
+#clicks {
+  position: absolute;
+  top: 465px;
+  left: 310px;
+  height: 75px;
+  width: 270px;
+  font-size: 60px;
+  border-radius: 10px;
+  opacity: 0.8;
+  color: white;
+  text-align: center;
+  background-color: gray;
+  border: 0
+}
+
+#totalLoss {
+  position: absolute;
+  top: 560px;
+  left: 310px;
+  height: 75px;
+  width: 270px;
+  font-size: 60px;
+  border-radius: 10px;
+  opacity: 0.8;
+  color: white;
+  text-align: center;
+  background-color: gray;
+  border: 0
+}
+
+#buttonCave {
+  position: absolute;
+  height: 250px;
+  width: 250px;
+  left: 430px;
+  top: 185px;
+}
+
+#buttonHouse {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  left: 677px;
+  top: 30px;
+}
+
+#buttonGoldmine {
+  position: absolute;
+  height: 220px;
+  width: 220px;
+  left: 910px;
+  top: 225px;
+}
+
+#buttonCasino {
+  position: absolute;
+  height: 180px;
+  width: 200px;
+  left: 1125px;
+  top: 50px;
+}
+
+#caveCircle {
+  width: 250px;
+  height: 250px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 250px;
+  background: gray;
+  position: absolute;
+  z-index: -1;
+  left: 430px;
+  top: 205px;
+  opacity: 0.5;
+}
+
+#houseCircle {
+  width: 250px;
+  height: 250px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 250px;
+  background: rgb(51, 153, 155);
+  position: absolute;
+  z-index: -1;
+  left: 650px;
+  top: 15px;
+  opacity: 0.5;
+}
+
+#goldmineCircle {
+  width: 250px;
+  height: 250px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 250px;
+  background: rgb(175, 80, 80);
+  position: absolute;
+  z-index: -1;
+  left: 880px;
+  top: 200px;
+  opacity: 0.5;
+}
+
+#casinoCircle {
+  width: 250px;
+  height: 250px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 250px;
+  background: rgb(255, 103, 253);
+  position: absolute;
+  z-index: -1;
+  left: 1100px;
+  top: 15px;
+  opacity: 0.5;
+}
+
+#buttonCave:hover ~ #caveCircle {
+  background-color: black;
+  opacity: 1.0;
+}
+
+#buttonHouse:hover ~ #houseCircle {
+  background: rgb(51, 153, 255);
+  opacity: 1.0;
+}
+
+#buttonGoldmine:hover ~ #goldmineCircle {
+  background: rgb(255, 0, 0);
+  opacity: 1.0;
+}
+
+#buttonCasino:hover ~ #casinoCircle {
+  background: rgb(255, 0, 102);
+  opacity: 1.0;
+}
+
+#blackRectangle:hover {
+  opacity: 1.0;
+}
+
+ul:hover ~#blackRectangle {
+  opacity: 1.0;
+}
+
+#buttonReset {
+  height: 50px;
+  width: 150px;
+  position: absolute;
+  top: 400px;
+  left: 1200px;
+  font-size: 24px;
+  font-family: Impact;
+  background-color: red;
+  border: 0;
+  color: white;
+  border-radius: 50px;
+  opacity: 0.5;
+}
+
+#buttonReset:hover {
+  opacity: 1.0;
+}
+
+#totalGold:hover {
+  opacity: 1.0;
+}
+
+#totalGain:hover {
+  opacity: 1.0;
+}
+
+#totalLoss:hover {
+  opacity: 1.0;
+}
+
+#clicks:hover {
+  opacity: 1.0;
+}
+
+#caveChance {
+  position: absolute;
+  color: white;
+  left: 460px;
+  top: 60px;
+  font-size: 30px;
+  text-align: center;
+  opacity: 0;
+}
+
+#buttonCave:hover ~ #caveChance {
+ opacity: 1.0;
+}
+
+#houseChance {
+ position: absolute;
+ color: white;
+ left: 700px;
+ top: 280px;
+ font-size: 30px;
+ text-align: center;
+ opacity: 0;
+}
+
+#buttonHouse:hover ~ #houseChance {
+ opacity: 1.0;
+}
+
+#goldmineChance {
+ position: absolute;
+ color: white;
+ left: 910px;
+ top: 60px;
+ font-size: 30px;
+ text-align: center;
+ opacity: 0;
+}
+
+#buttonGoldmine:hover ~ #goldmineChance {
+  opacity: 1.0;
+}
+
+#casinoChance {
+  position: absolute;
+  color: white;
+  left: 1130px;
+  top: 260px;
+  font-size: 30px;
+  text-align: center;
+  opacity: 0;
+}
+
+#buttonCasino:hover ~ #casinoChance {
+  opacity: 1.0;
+}
+
+#totalGoldLabel {
+  position: absolute;
+  color: white;
+  left: 115px;
+  top: 535.5px;
+}
+
+#totalGainLabel {
+  position: absolute;
+  color: white;
+  left: 117px;
+  top: 630.5px;
+}
+
+#totalLossLabel {
+  position: absolute;
+  color: white;
+  left: 400px;
+  top: 630.5px;
+}
+
+#totalClicksLabel {
+  position: absolute;
+  color: white;
+  left: 390px;
+  top: 535.5px;
+}
+
+#ninjagold {
+  font-size: 70px;
+  font-weight: bold;
+  position: absolute;
+  top: 70px;
+  left: 105px;
+  color: rgb(255,203,0);
+  transition: left .5s ease-in, top .5s ease-in;
+}
+
+#frame {
+  height: 300px;
+  width: 400px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+#buttonCave:active {
+  opacity: 0.5;
+}
+
+#buttonHouse:active {
+  opacity: 0.5;
+}
+
+#buttonGoldmine:active {
+  opacity: 0.5;
+}
+
+#buttonCasino:active {
+  opacity: 0.5  ;
+}
+
+#all {
+  position: absolute;
+  top: 460px;
+  left: 600px;
+  width: 255px;
+  border: 5;
+}
+
+#gain {
+  position: absolute;
+  top: 460px;
+  left: 850px;
+  width: 255px;
+  border: 5;
+}
+
+#loss {
+  position: absolute;
+  top: 460px;
+  left: 1100px;
+  width: 250px;
+  border: 5;
+}
+
+#allList {
+  position: absolute;
+  left: 600px;
+  top: 490px;
+}
+
+#gainList {
+  position: absolute;
+  left: 600px;
+  top: 490px;
+  opacity: 0;
+}
+
+#lossList {
+  position: absolute;
+  left: 600px;
+  top: 490px;
+  opacity: 0;
+}
+
+
+#all, #gain, #loss {
+  color: white;
+  background: black;
+  height: 40px;
+}
+
+#win {
+  position: absolute;
+  font-size: 90px;
+  top: 330px;
+  left: 40px;
+  font-weight: bold;
+  font-family: impact;
+  color: green;
+  opacity: 0;
+  -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color: white;
+}
+
+#lose {
+  position: absolute;
+  font-size: 90px;
+  top: 330px;
+  left: 40px;
+  font-weight: bold;
+  font-family: impact;
+  color: rgb(255,51,0);
+  -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color: white;
+  opacity: 0;
+}

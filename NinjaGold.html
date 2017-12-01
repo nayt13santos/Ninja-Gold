@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="NinjaGold.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Ninja Gold</title>
+</head>
+<body>
+    <input type="image" src="cave.png" onclick="caveFunction()" id="buttonCave"></input>
+    <input type="image" src="house.png" onclick="houseFunction()" id="buttonHouse"></input>
+    <input type="image" src="goldmine.png" onclick="goldmineFunction()" id="buttonGoldmine"></input>
+    <input type="image" src="casino.png" onclick="casinoFunction()" id="buttonCasino"></input>
+    <button type="button" onclick="resetFunction()" id="buttonReset">Reset</button>
+    <input type="text" id="totalGold" value="0"></input>
+    <input type="text" id="totalGain" value="0"></input>
+    <input type="text" id="totalLoss" value="0"></input>
+    <input type="text" id="clicks" value="0"></input>
+    <ul id="allList"></ul>
+    <ul id="gainList"></ul>
+    <ul id="lossList"></ul>
+    <img src="ninja.gif" id="ninja">
+    <div id="blackRectangle"></div>
+    <div id="textLabel1"></div>
+    <div id="textLabel2"></div>
+    <div id="textLabel3"></div>
+    <div id="textLabel4"></div>
+    <div id="caveCircle"></div>
+    <div id="houseCircle"></div>
+    <div id="goldmineCircle"></div>
+    <div id="casinoCircle"></div>
+    <div id="caveChance"><b>CAVE</b><br><br>Gold: +5<br>Chance: 100%</div>
+    <div id="houseChance"><b>HOUSE</b><br><br>Gold: +10<br>Chance: 80%</div>
+    <div id="goldmineChance"><b>GOLD MINE</b><br><br>Gold: + 1-25<br>Chance: 80%</div>
+    <div id="casinoChance"><b>CASINO</b><br><br>Gold: +/- 40-50<br>Chance: 50%</div>
+    <div id="totalGoldLabel">TOTAL GOLD</div>
+    <div id="totalGainLabel">TOTAL GAIN</div>
+    <div id="totalLossLabel">TOTAL LOSS</div>
+    <div id="totalClicksLabel">TOTAL CLICKS</div>
+    <div id="ninjagold">NINJA<br>GOLD</div>
+    <img src="frame.png" id="frame">
+    <button id="all" onclick="allFunction()">ALL</button>
+    <button id="gain" onclick="gainFunction()">GAIN</button>
+    <button id="loss" onclick="lossFunction()">LOSS</button>
+    <div id="win">YOU WIN</div>
+    <div id="lose">YOU LOSE</div>
+</body>
+<script rel="stylesheet" src="NinjaGold.js"></script>
+</html>
